@@ -1,3 +1,4 @@
+import random #samuel
 #Robert was here!!
 class Random:
     """Random function that will tell you if you guessed a number
@@ -9,6 +10,8 @@ class Random:
             return "Correct, that is the lucky number"
         else:
             return "Incorrect, wrong number"
-        
-            
+
+    #Samuel
+    def generate_random_number(self):
+        return random.randint(1,10)
     
