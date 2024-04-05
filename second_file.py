@@ -15,3 +15,6 @@ class Random:
     def generate_random_number(self):
         return random.randint(1,10)
     
+    #Deborah was here
+    def generate_random_number(self):
+        return random.randint(1,10)
