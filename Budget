@@ -1,0 +1,9 @@
+class BudgetManager:
+    def __init__(self):
+        self.categories = {}
+    
+    def add_expense(self, category, amount):
+        if category in self.categories:
+            self.categories[category] += amount
+        else:
+            self.categories[category] = amount
