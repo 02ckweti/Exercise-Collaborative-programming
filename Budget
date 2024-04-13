@@ -13,7 +13,7 @@ class BudgetManager:
             self.categories[category] = amount
 
     def total_expense(self):
-        """ A method that prints out the total expense for each category
+        """A method that will print out the total expense for each category
         """
         for category, total_amount in self.categories.items():
             print(f"{category}: ${total_amount}")
