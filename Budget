@@ -1,4 +1,8 @@
 class BudgetManager:
+    """Class that will manage different expenses across different categories
+    Args:
+    categories (dict): a dictionary storing the category and expense
+    """
     def __init__(self):
         self.categories = {}
     
@@ -7,3 +11,9 @@ class BudgetManager:
             self.categories[category] += amount
         else:
             self.categories[category] = amount
+
+    def total_expense(self):
+        """ A method that prints out the total expense for each category
+        """
+        for category, total_amount in self.categories.items():
+            print(f"{category}: ${total_amount}")
