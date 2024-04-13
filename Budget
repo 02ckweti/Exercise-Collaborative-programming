@@ -32,3 +32,12 @@ class BudgetManager:
             return self.categories[category]
         else:
             return 0
+    def remove_category(self, category):
+        """
+        Removes category from the budget and its expenses.
+
+        Parameters:
+            category (str): name of removed category
+        """
+        if category in self.categories:
+            del self.categories[category]
