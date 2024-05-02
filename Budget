@@ -1,3 +1,11 @@
+import sys
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from argparse import ArgumentParser
+import csv
+
+
 class BudgetManager:
     """Class that will manage different expenses across different categories
     Args:
@@ -41,3 +49,34 @@ class BudgetManager:
         """
         if category in self.categories:
             del self.categories[category]
+
+def main(self, filepath):
+    """Data Aggregation function that will read the path to a file and do aggregation methods
+
+    Args:
+        filepath (str): path to a csv file
+    """
+    with open(filepath, newline=" ") as csvfile:
+        csvpath = csv.reader(csvfile)
+        for row in csvpath:
+            
+
+    
+    
+def parse_args(argslist):
+    """Parse command line arguments
+
+    Args:
+        argslist (list): list of command line args
+
+    Returns:
+        namespace object
+    """
+
+    parser = ArgumentParser()
+    parser.add_argument("filepath",help="path to a CSV file")
+    return parser.parse_args(argslist)
+
+if __name__ == "__main__":
+    args = parse_args(sys.argv[1:])
+    main(args.filepath)
