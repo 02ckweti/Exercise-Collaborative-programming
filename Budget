@@ -1,3 +1,7 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 class BudgetManager:
     """Class that will manage different expenses across different categories
     Args:
