@@ -1,0 +1,33 @@
+2023-01-01,January,Food,$300,Alice,$2000,New York,Credit Card
+2023-01-05,January,Transportation,$100,Alice,$2000,New York,Cash
+2023-01-10,January,Entertainment,$50,Alice,$2000,New York,Debit Card
+2023-01-15,January,Utilities,$150,Alice,$2000,New York,Credit Card
+2023-02-01,February,Food,$320,Bob,$2500,Los Angeles,Cash
+2023-02-05,February,Transportation,$110,Bob,$2500,Los Angeles,Credit Card
+2023-02-10,February,Entertainment,$60,Bob,$2500,Los Angeles,Debit Card
+2023-02-15,February,Utilities,$160,Bob,$2500,Los Angeles,Credit Card
+2023-03-01,March,Food,$280,Charlie,$1800,Chicago,Debit Card
+2023-03-05,March,Transportation,$90,Charlie,$1800,Chicago,Cash
+2023-03-10,March,Entertainment,$70,Charlie,$1800,Chicago,Credit Card
+2023-03-15,March,Utilities,$140,Charlie,$1800,Chicago,Debit Card
+2023-01-01,January,Housing,$800,Alice,$2000,New York,Credit Card
+2023-02-01,February,Housing,$850,Bob,$2500,Los Angeles,Cash
+2023-02-05,February,Education,$200,Bob,$2500,Los Angeles,Debit Card
+2023-02-10,February,Healthcare,$80,Bob,$2500,Los Angeles,Credit Card
+2023-02-15,February,Shopping,$150,Bob,$2500,Los Angeles,Cash
+2023-03-01,March,Housing,$900,Charlie,$1800,Chicago,Debit Card
+2023-03-05,March,Education,$250,Charlie,$1800,Chicago,Cash
+2023-03-10,March,Healthcare,$100,Charlie,$1800,Chicago,Credit Card
+2023-03-15,March,Shopping,$200,Charlie,$1800,Chicago,Cash
+2023-01-01,January,Food,$320,Eve,$1800,San Francisco,Credit Card
+2023-01-05,January,Transportation,$80,Eve,$1800,San Francisco,Cash
+2023-01-10,January,Entertainment,$60,Eve,$1800,San Francisco,Debit Card
+2023-01-15,January,Utilities,$130,Eve,$1800,San Francisco,Credit Card
+2023-02-01,February,Food,$300,David,$2200,Seattle,Cash
+2023-02-05,February,Transportation,$120,David,$2200,Seattle,Credit Card
+2023-02-10,February,Entertainment,$70,David,$2200,Seattle,Debit Card
+2023-02-15,February,Utilities,$150,David,$2200,Seattle,Credit Card
+2023-03-01,March,Food,$260,Fiona,$2000,Denver,Debit Card
+2023-03-05,March,Transportation,$70,Fiona,$2000,Denver,Cash
+2023-03-10,March,Entertainment,$50,Fiona,$2000,Denver,Credit Card
+2023-03-15,March,Utilities,$120,Fiona,$2000,Denver,Debit Card
