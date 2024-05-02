@@ -1,0 +1,52 @@
+date,month,category,spending,name,income,location,payment
+2023-01-01,January,Home & Utilities,$600,John,"$4,000",New York,Credit Card
+2023-01-05,January,Transportation,$200,John,"$4,000",New York,Cash
+2023-01-10,January,Restaurants & Dining,$200,John,"$4,000",New York,Debit Card
+2023-01-15,January,Home & Utilities,$300,John,"$4,000",New York,Credit Card
+2023-02-01,February,Groceries,$350,John,"$4,000",New York,Cash
+2023-02-05,February,Transportation,$250,John,"$4,000",New York,Credit Card
+2023-02-10,February,Shopping & Entertainment,$150,John,"$4,000",New York,Debit Card
+2023-02-15,February,Home & Utilities,$350,John,"$4,000",New York,Credit Card
+2023-03-01,March,Groceries,$300,John,"$4,000",New York,Debit Card
+2023-03-05,March,Transportation,$200,John,"$4,000",New York,Cash
+2023-03-10,March,Restaurants & Dining,$150,John,"$4,000",New York,Credit Card
+2023-03-15,March,Home & Utilities,$250,John,"$4,000",New York,Debit Card
+2023-01-01,January,Insurance,$300,John,"$4,000",New York,Credit Card
+2023-02-01,February,Insurance,$300,John,"$4,000",New York,Cash
+2023-02-05,February,Personal & Family Care,$100,John,"$4,000",New York,Debit Card
+2023-02-10,February,Health,$200,John,"$4,000",New York,Credit Card
+2023-02-15,February,Shopping & Entertainment,$200,John,"$4,000",New York,Cash
+2023-03-01,March,Insurance,$300,John,"$4,000",New York,Debit Card
+2023-03-05,March,Personal & Family Care,$100,John,"$4,000",New York,Cash
+2023-03-10,March,Health,$200,John,"$4,000",New York,Credit Card
+2023-03-15,March,Shopping & Entertainment,$200,John,"$4,000",New York,Cash
+2023-01-01,January,Business expenses,$500,John,"$4,000",New York,Credit Card
+2023-02-01,February,Business expenses,$500,John,"$4,000",New York,Cash
+2023-02-05,February,Education,$200,John,"$4,000",New York,Debit Card
+2023-02-10,February,Miscellaneous & Others,$100,John,"$4,000",New York,Credit Card
+2023-02-15,February,Business expenses,$500,John,"$4,000",New York,Cash
+2023-03-01,March,Business expenses,$500,John,"$4,000",New York,Debit Card
+2023-03-05,March,Education,$200,John,"$4,000",New York,Cash
+2023-03-10,March,Miscellaneous & Others,$100,John,"$4,000",New York,Credit Card
+2023-03-15,March,Business expenses,$500,John,"$4,000",New York,Cash
+2023-04-01,April,Pets,$100,John,"$4,000",New York,Credit Card
+2023-05-01,May,Pets,$100,John,"$4,000",New York,Cash
+2023-06-01,June,Vacation,"$3,000",John,"$4,000",New York,Credit Card
+2023-07-01,July,Vacation,"$3,000",John,"$4,000",New York,Debit Card
+2023-08-01,August,Vacation,"$3,000",John,"$4,000",New York,Credit Card
+2023-09-01,September,Pets,$100,John,"$4,000",New York,Cash
+2023-10-01,October,Pets,$100,John,"$4,000",New York,Debit Card
+2023-11-01,November,Vacation,"$3,000",John,"$4,000",New York,Credit Card
+2023-12-01,December,Vacation,"$3,000",John,"$4,000",New York,Cash
+2024-01-01,January,Pets,$100,John,"$4,000",New York,Credit Card
+2024-02-01,February,Pets,$100,John,"$4,000",New York,Cash
+2024-03-01,March,Vacation,"$3,000",John,"$4,000",New York,Debit Card
+2024-04-01,April,Pets,$100,John,"$4,000",New York,Credit Card
+2024-05-01,May,Pets,$100,John,"$4,000",New York,Cash
+2024-06-01,June,Vacation,"$3,000",John,"$4,000",New York,Credit Card
+2024-07-01,July,Vacation,"$3,000",John,"$4,000",New York,Debit Card
+2024-08-01,August,Vacation,"$3,000",John,"$4,000",New York,Credit Card
+2024-09-01,September,Pets,$100,John,"$4,000",New York,Cash
+2024-10-01,October,Pets,$100,John,"$4,000",New York,Debit Card
+2024-11-01,November,Vacation,"$3,000",John,"$4,000",New York,Credit Card
+2024-12-01,December,Vacation,"$3,000",John,"$4,000",New York,Cash
