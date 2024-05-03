@@ -5,6 +5,10 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+df = pd.read_csv("Transactions.csv")
+
+sns.jointplot(x='', y='', data=df, kind='scatter')
+plt.show()
 
 class BudgetManager:
     """Class that will manage different expenses across different categories
