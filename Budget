@@ -64,7 +64,7 @@ def main(self, filepath):
     with open(filepath, newline='') as csvfile:
         csvpath = csv.reader(csvfile)
         for row in csvpath:
-            if 'Category' in row and 'Amount' in row:  # Check for the expected columns in the CSV
+            if 'Category' in row and 'Amount' in row: 
                 budget_manager.add_expense(row['Category'], float(row['Amount']))
 
     budget_manager.total_expense()
