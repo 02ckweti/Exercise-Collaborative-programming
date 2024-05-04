@@ -60,12 +60,15 @@ def main(self, filepath):
     Args:
         filepath (str): path to a csv file
     """
-    with open(filepath, newline=" ") as csvfile:
+    budget_manager = BudgetManager()
+    with open(filepath, newline='') as csvfile:
         csvpath = csv.reader(csvfile)
-        #for row in csvpath:
+        for row in csvpath:
+            if 'Category' in row and 'Amount' in row:  # Check for the expected columns in the CSV
+                budget_manager.add_expense(row['Category'], float(row['Amount']))
 
+    budget_manager.total_expense()
 
-    
     
 def parse_args(argslist):
     """Parse command line arguments
