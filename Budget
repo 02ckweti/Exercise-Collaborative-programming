@@ -40,30 +40,28 @@ class BudgetManager:
             return self.categories[category]
         else:
             return 0
-    def remove_category(self, category):
+    def analytics_by_location(self, location):
         """
         Removes category from the budget and its expenses.
 
         Parameters:
             category (str): name of removed category
         """
-        if category in self.categories:
-            del self.categories[category]
+        location_data = self.data[self.data['location'] == location]
+        location_data['spending'] = location_data['spending'].apply(self.parse_currency)
+        expenses_by_location = location_data.groupby('category')['spending'].sum().to_dict()
+        return expenses_by_location
 
-def main(self, filepath):
-    """Data Aggregation function that will read the path to a file and do aggregation methods
+    def recommendations(self):
+        """Data Aggregation function that will read the path to a file and do aggregation methods
 
-    Args:
-        filepath (str): path to a csv file
-    """
-    budget_manager = BudgetManager()
-    with open(filepath, newline='') as csvfile:
-        csvpath = csv.reader(csvfile)
-        for row in csvpath:
-            if 'Category' in row and 'Amount' in row: 
-                budget_manager.add_expense(row['Category'], float(row['Amount']))
-
-    budget_manager.total_expense()
+        Args:
+            filepath (str): path to a csv file
+        """
+        total_income = self.parse_currency(self.data['income'].sum())
+        total_expenses = self.parse_currency(self.data['spending'].sum())
+        return "Consider reducing your expenses." if total_expenses > total_income else "Your spending is within your income. Good Job!"
+        
 
     
 def parse_args(argslist):
