@@ -8,15 +8,37 @@ class BudgetManager:
     and spending based on location, and gives suggestions on spending habits.
     """
     def __init__(self, filename, delimiter=','):
+        """
+        Creates new instance for the BudgetManager class 
+
+        Args:
+            filename (str): Path to the CSV file
+            delimiter (str): Character separating values
+        """
         self.filename = filename
         self.data = pd.read_csv(filename, delimiter=delimiter)
 
     def parse_currency(self, value):
+        """
+        Parses and converts a currency that is a string into a floating-point number
+
+        Args:
+            value (str or float): The currency value
+
+        Returns:
+            float: The value of the currency as a string or float
+        """
         if isinstance(value, str):
             return float(value.replace('$', '').replace(',', ''))
         return value
 
     def total_expenses(self):
+        """
+        Calculates total expenses 
+
+        Returns:
+            dict: keys as categories with corresponding values as total spendings
+        """
         expenses_by_category = {}
         for _, row in self.data.iterrows():
             category = row['category']
