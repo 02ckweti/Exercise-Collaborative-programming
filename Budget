@@ -42,10 +42,12 @@ class BudgetManager:
             return 0
     def analytics_by_location(self, location):
         """
-        Removes category from the budget and its expenses.
+        Tracks spending by location
 
         Parameters:
-            category (str): name of removed category
+            location (str): location of individual
+        
+        Returns a dictionary 
         """
         location_data = self.data[self.data['location'] == location]
         location_data['spending'] = location_data['spending'].apply(self.parse_currency)
@@ -53,10 +55,10 @@ class BudgetManager:
         return expenses_by_location
 
     def recommendations(self):
-        """Data Aggregation function that will read the path to a file and do aggregation methods
+        """Gives recommendations based on total expenses and total income
 
-        Args:
-            filepath (str): path to a csv file
+        Returns:
+            str: statement that instructs user based on if they are overspending or not
         """
         total_income = self.parse_currency(self.data['income'].sum())
         total_expenses = self.parse_currency(self.data['spending'].sum())
