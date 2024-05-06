@@ -26,6 +26,37 @@ class BudgetManager:
             expenses_by_category[category] += spending
         return expenses_by_category
 
+    def spending_by_category(self, category):
+        """
+        Calculate the total spending for a specified category across all entries in the dataset.
+    
+        Parameters:
+        category (str): The category for which the total spending needs to be calculated.
+    
+        Returns:
+        float: The total spending amount for the specified category.
+        """
+        total_spending = 0
+        for _, row in self.data.iterrows():
+            if row['category'] == category:
+                total_spending += self.parse_currency(row['spending'])
+        return total_spending
+
+    def analytics_by_month(self, month):
+        """
+        Provides a summary of expenses grouped by category for a specified month from the dataset.
+    
+        Parameters:
+        month (str): The month for which the expense analysis is to be performed.
+    
+        Returns:
+        dict: A dictionary where keys are categories and values are the summed spending amounts in those categories for the specified month.
+        """
+        month_data = self.data[self.data['month'] == month]
+        expenses_by_category = month_data.groupby('category')['spending'].sum().to_dict()
+        return expenses_by_category
+
+
     def get_expense_by_category(self, category):
         """
         Gets the total expenses for a specific category. Then it Returns zero if the category does not exist.
