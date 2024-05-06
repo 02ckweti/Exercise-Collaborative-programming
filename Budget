@@ -1,34 +1,30 @@
-import sys
-from argparse import ArgumentParser
-import csv
 import pandas as pd
-import seaborn as sns
+import argparse
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("budgetfile.csv")
-
-sns.jointplot(x='', y='', data=df, kind='scatter')
-plt.show()
-
 class BudgetManager:
-    """Class that will manage different expenses across different categories
-    Args:
-    categories (dict): a dictionary storing the category and expense
     """
-    def __init__(self):
-        self.categories = {}
-    
-    def add_expense(self, category, amount):
-        if category in self.categories:
-            self.categories[category] += amount
-        else:
-            self.categories[category] = amount
+    Class that tracks your finances, provides analytics based on monthly spending
+    and spending based on location, and gives suggestions on spending habits.
+    """
+    def __init__(self, filename, delimiter=','):
+        self.filename = filename
+        self.data = pd.read_csv(filename, delimiter=delimiter)
 
-    def total_expense(self):
-        """A method that will print out the total expense for each category
-        """
-        for category, total_amount in self.categories.items():
-            print(f"{category}: ${total_amount}")
+    def parse_currency(self, value):
+        if isinstance(value, str):
+            return float(value.replace('$', '').replace(',', ''))
+        return value
+
+    def total_expenses(self):
+        expenses_by_category = {}
+        for _, row in self.data.iterrows():
+            category = row['category']
+            spending = self.parse_currency(row['spending'])
+            if category not in expenses_by_category:
+                expenses_by_category[category] = 0
+            expenses_by_category[category] += spending
+        return expenses_by_category
 
     def get_expense_by_category(self, category):
         """
