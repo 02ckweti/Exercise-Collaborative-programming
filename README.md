@@ -13,9 +13,11 @@ value is the aggregate amount spent in that category. You will also see a recomm
 versa).
 - You will also see a bar chart visualizing your expenses across all different categories
 
-  | method/function | primary author | techniques demonstrated |
-| --------------- | --------------- | --------------- |
-| Row 1 Cell 1    | Row 1 Cell 2    | Row 1 Cell 3    |
-| Row 2 Cell 1    | Row 2 Cell 2    | Row 2 Cell 3    |
-| Row 3 Cell 1    | Row 3 Cell 2    | Row 3 Cell 3    |
+
+
+| Method/function | Primary author | Techniques demonstrated  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
