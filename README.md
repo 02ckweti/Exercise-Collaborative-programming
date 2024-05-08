@@ -17,7 +17,15 @@ versa).
 
 | Method/function | Primary author | Techniques demonstrated  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| parse_currency     | Deborah Alain | conditional statement |
+| total_expenses   | Deborah      |  conditional statement  |
+| spending_by_category | Cullen Kweti      | key function |
+| analytics_by_month | Cullen |  groupby() operation in Pandas |
+| analytics_by_location | Dagem Legesse |  groupby() operation in Pandas |
+| recommendations | Dagem | conditional expression |
+| plot_expenses_by_category | Robert Dang | data visualization with pyplot |
+| __name__ == "main" | Robert | ArgumentParser class, f-strings containing expressions |
+
+
+
 
