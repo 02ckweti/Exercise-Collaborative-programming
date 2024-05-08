@@ -13,6 +13,8 @@ value is the aggregate amount spent in that category. You will also see a recomm
 versa).
 - You will also see a bar chart visualizing your expenses across all different categories
 
+Attribution
+
 
 
 | Method/function | Primary author | Techniques demonstrated  |
