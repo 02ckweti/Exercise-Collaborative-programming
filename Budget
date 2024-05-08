@@ -75,6 +75,7 @@ class BudgetManager:
         dict: A dictionary where keys are categories and values are the summed spending amounts in those categories for the specified month.
         """
         month_data = self.data[self.data['month'] == month]
+        month_data.loc[:, 'spending'] = month_data['spending'].apply(self.parse_currency)
         expenses_by_category = month_data.groupby('category')['spending'].sum().to_dict()
         return expenses_by_category
 
@@ -119,20 +120,38 @@ class BudgetManager:
         
 
     
-def parse_args(argslist):
-    """Parse command line arguments
+class Visualization:
+    "A class for visualizing your total expenses."
+    def __init__(self, data):
+        self.data = data
 
-    Args:
-        argslist (list): list of command line args
+    def plot_expenses_by_category(self):
+        """
+        Plot total expenses by category as a bar chart
 
-    Returns:
-        namespace object
-    """
-
-    parser = ArgumentParser()
-    parser.add_argument("filepath",help="path to a CSV file")
-    return parser.parse_args(argslist)
+        """
+        expenses_data = self.data.total_expenses()
+        categories = list(expenses_data.keys())
+        values = list(expenses_data.values())
+        plt.bar(categories, values)
+        plt.xlabel('Category')
+        plt.ylabel('Spending ($)')
+        plt.title('Expenses by Category')
+        plt.xticks(rotation=90)
+        plt.show()
 
 if __name__ == "__main__":
-    args = parse_args(sys.argv[1:])
-    main(args.filepath)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('filename', type=str, help='Path to the CSV file')
+    args = parser.parse_args()
+
+    budget_manager = BudgetManager(args.filename)
+    print("Expenses by category:", budget_manager.total_expenses())
+    print("Analytics for January:", budget_manager.analytics_by_month('January'))
+    print("Analytics for New York:", budget_manager.analytics_by_location('New York'))
+    print("Spending in Home & Utilities category:", budget_manager.spending_by_category('Home & Utilities'))
+    print("Key recommendations:", budget_manager.recommendations())
+
+    visualizer = Visualization(budget_manager)
+    visualizer.plot_expenses_by_category()
+
