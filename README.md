@@ -19,7 +19,8 @@ Attribution
 
 | Method/function | Primary author | Techniques demonstrated  |
 | ------------- |:-------------:| -----:|
-| parse_currency     | Deborah Alain | conditional statement |
+| __init__     | Deborah Alain | method definition |
+| parse_currency     | Deborah     | conditional statement |
 | total_expenses   | Deborah      |  conditional statement  |
 | spending_by_category | Cullen Kweti      | key function |
 | analytics_by_month | Cullen |  groupby() operation in Pandas |
